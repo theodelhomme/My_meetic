@@ -1,0 +1,5 @@
+suites:
+    main:
+        namespace: Meetic
+        psr4_prefix: Meetic
+        src_path: app

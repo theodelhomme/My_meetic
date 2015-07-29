@@ -1,0 +1,16 @@
+<?php $__env->startSection('titre'); ?>
+	Profil
+<?php $__env->stopSection(); ?>	
+
+<?php $__env->startSection('content'); ?>
+	<div id="profil">
+		<h1>Bienvenue sur Meetic <?php echo $user->login; ?></h1>
+		<ul>
+			<li>Prénom: <?php echo $user->lastname; ?></li>	
+			<li>Nom: <?php echo $user->name; ?></li>
+			<li>Date de naissance: <?php echo $user->birthdate; ?></li>
+			<li>Ville: <?php echo $user->city; ?></li>
+		</ul>
+	</div>
+<?php $__env->stopSection(); ?>	
+<?php echo $__env->make('home', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

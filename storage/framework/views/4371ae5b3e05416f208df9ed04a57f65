@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>My meetic</title>
+	</head>
+	<body>
+	<?php
+		echo Form::open(array('url' => '/'));	
+		echo Form::text('login', '', array('placeholder' => 'Login'));
+		echo Form::text('name', '', array('placeholder' => 'Name'));
+		echo Form::text('lastname', '', array('placeholder' => 'Lastname'));
+		echo Form::text('birthdate', '', array('placeholder' => 'Birthdate'));
+		echo Form::text('gender', '', array('placeholder' => 'Gender'));
+		echo Form::text('city', '', array('placeholder' => 'City'));
+		echo Form::text('departement', '', array('placeholder' => 'Departement'));
+		echo Form::text('region', '', array('placeholder' => 'Region'));
+		echo Form::text('country', '', array('placeholder' => 'Country'));
+		echo Form::password('e-mail', array('placeholder' => 'E-mail'));
+		echo Form::submit("M'inscrire");
+		echo Form::close();
+	?>	 
+	</body>
+</html>

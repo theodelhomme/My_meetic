@@ -1,0 +1,100 @@
+<?php $__env->startSection('titre'); ?>
+	Inscription
+<?php $__env->stopSection(); ?>	
+
+<?php $__env->startSection('content'); ?>
+	<div id="sign">	
+		<h1>Inscrivez-vous sur Meetic !</h1>
+		
+		<?php echo Form::open(array('action' => 'UserController@create')); ?>
+
+		
+		<div class="form-group">
+			<?php echo Form::text('login', '', array('placeholder' => 'Login', 'class' => 'form-control')); ?>
+
+			<?php echo $errors->first('login', '<small class="help-block">:message</small>'); ?>
+
+		</div>
+
+		<div class="form-group">	
+			<?php echo Form::text('name', '', array('placeholder' => 'Name', 'class' => 'form-control')); ?>
+
+			<?php echo $errors->first('name', '<small class="help-block">:message</small>'); ?>
+
+		</div>
+		
+		<div class="form-group">	
+			<?php echo Form::text('lastname', '', array('placeholder' => 'Lastname', 'class' => 'form-control')); ?>
+
+			<?php echo $errors->first('lastname', '<small class="help-block">:message</small>'); ?>
+
+		</div>
+
+		<div class="form-group">	
+			<?php echo Form::date('birthdate', '', array('placeholder' => 'Birthdate dd/mm/yyyy', 'class' => 'form-control')); ?>
+
+			<?php echo $errors->first('birthdate', '<small class="help-block">:message</small>'); ?>
+
+		</div>
+
+		<div class="form-group">	
+			<?php echo Form::select('gender', array('M' => 'Male', 'W' => 'Woman', 'class' => 'form-control')); ?>
+
+			<?php echo $errors->first('gender', '<small class="help-block">:message</small>'); ?>
+
+		</div>
+
+		<div class="form-group">	
+			<?php echo Form::text('city', '', array('placeholder' => 'City', 'class' => 'form-control')); ?>
+
+			<?php echo $errors->first('city', '<small class="help-block">:message</small>'); ?>
+
+		</div>
+
+		<div class="form-group">	
+			<?php echo Form::text('departement', '', array('placeholder' => 'Departement', 'class' => 'form-control')); ?>
+
+			<?php echo $errors->first('departement', '<small class="help-block">:message</small>'); ?>
+
+		</div>
+		
+		<div class="form-group">	
+			<?php echo Form::text('region', '', array('placeholder' => 'Region', 'class' => 'form-control')); ?>
+
+			<?php echo $errors->first('region', '<small class="help-block">:message</small>'); ?>
+
+		</div>
+		
+		<div class="form-group">	
+			<?php echo Form::text('country', '', array('placeholder' => 'Country', 'class' => 'form-control')); ?>
+
+			<?php echo $errors->first('country', '<small class="help-block">:message</small>'); ?>
+
+		</div>
+	
+		<div class="form-group">	
+   			<?php echo Form::email('email', '', array('placeholder' => 'E-mail', 'class' => 'form-control')); ?>
+
+   			<?php echo $errors->first('e-mail', '<small class="help-block">:message</small>'); ?>
+
+		</div>
+
+		<div class="form-group">	
+			<?php echo Form::password('password', array('placeholder' => 'Password', 'class' => 'form-control')); ?>
+
+			<?php echo $errors->first('password', '<small class="help-block">:message</small>'); ?>
+
+		</div>	
+		
+		<?php echo Form::submit("M'inscrire", ['class' => 'btn btn-info pull-right']); ?>
+
+   		<?php echo Form::close(); ?>
+
+
+   		<div class="lien">
+   			Déjà membre ? <a href="<?php echo e(URL::to('/login')); ?>">Connectez-vous</a>
+   		</div>		
+   	
+   	</div>
+<?php $__env->stopSection(); ?>   		
+<?php echo $__env->make('home', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

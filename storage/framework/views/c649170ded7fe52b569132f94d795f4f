@@ -1,0 +1,19 @@
+<?php $__env->startSection('titre'); ?>
+	Connexion
+<?php $__env->stopSection(); ?>	
+
+<?php $__env->startSection('content'); ?>
+	<div id="profil">
+		<?php echo $user->login;
+			  echo $user->name;
+			  echo $user->lastname;		
+			  echo $user->birthdate;	
+			  echo $user->gender;				  			  
+			  echo $user->city;	
+			  echo $user->departement;	
+			  echo $user->region;				  				  			  		
+			  echo $user->country;
+		?>	  				  
+	</div>
+<?php $__env->stopSection(); ?>	
+<?php echo $__env->make('home', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
